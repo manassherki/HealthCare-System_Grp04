@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>City Care Hospital - Home</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<header style="background-color:#1f4f66; color:#ffffff; padding:20px; text-align:center; border-bottom:3px solid #2f6f8f;">
+<h1 style="margin:0; color:#ffffff; text-align:center;">Home</h1>
+<p style="text-align:center; margin:8px 0 0 0;"><small style="color:#cfe3ea;">Caring for you, every single day</small></p>
+</header>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="departments.html">Departments</a></li>
+<li><a href="doctors.html">Doctors</a></li>
+<li><a href="appointment.html">Book Appointment</a></li>
+<li><a href="registration.html">Patient Registration</a></li>
+<li><a href="facilities.html">Facilities</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="sign_in.html">Sign In</a></li>
+<li><a href="sign_up.html">Sign Up</a></li>
+</ul>
+</nav>
+
+<div class="page-layout">
+<aside class="sidebar">
+<div class="info-card">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="appointment.html">Book an Appointment</a></li>
+<li><a href="registration.html">Patient Registration</a></li>
+<li><a href="departments.html">Our Departments</a></li>
+<li><a href="doctors.html">Meet Our Doctors</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</aside>
+
+<main class="content">
+<div id="welcomeMessage" class="welcome-box"></div>
+<div id="todayDate" class="date-box"></div>
+
+<h2>Welcome to City Care Hospital</h2>
+<p>City Care Hospital has been serving the community for over <b>20 years</b> with quality
+and affordable healthcare. We provide <strong>24x7 emergency services</strong>, expert doctors
+and modern medical equipment under one roof.</p>
+
+<h2>Why Choose Us</h2>
+<ul>
+<li>24x7 Emergency and Ambulance Service</li>
+<li>Experienced and qualified doctors</li>
+<li>Modern diagnostic and lab facilities</li>
+<li>Affordable treatment packages</li>
+<li>Online appointment booking</li>
+</ul>
+
+<h3>Take a Look Around</h3>
+<img class="gallery-img" src="Images/Hospital.webp" alt="Hospital Building">
+<img class="gallery-img" src="Images/ICU.jpg" alt="ICU">
+<img class="gallery-img" src="Images/OP.jpg" alt="Operation Theatre">
+<p id="selectedImageText" class="selected-img-msg"></p>
+
+<h3>Hospital Statistics</h3>
+<table>
+<tr>
+<th>Beds</th>
+<th>Doctors</th>
+<th>Departments</th>
+<th>Years of Service</th>
+</tr>
+<tr>
+<td id="bedsCount">0</td>
+<td id="doctorsCount">0</td>
+<td id="deptCount">0</td>
+<td id="yearsCount">0</td>
+</tr>
+</table>
+
+<h3>Stay Updated</h3>
+<div id="savedNewsletterMsg" class="saved-newsletter-msg"></div>
+<form id="newsletterForm" method="POST" action="#" novalidate>
+<fieldset>
+<legend>Subscribe to our Health Newsletter</legend>
+<label for="newsletterEmail">Your Email:<br>
+<input type="email" id="newsletterEmail" name="newsletter_email" placeholder="abcd@gmail.com"></label><br>
+<span id="newsletterError" class="newsletter-error"></span>
+<div id="newsletterSuccess" class="newsletter-success"></div>
+<input type="submit" id="newsletterSubmitBtn" value="Subscribe">
+</fieldset>
+</form>
+
+<div class="highlight-box">
+<p style="margin:0 0 10px 0;">Now accepting new patients - call our 24x7 helpline today!</p>
+<button type="button" id="emergencyBtn">Emergency Helpline</button>
+<p id="emergencyText" class="emergency-text"></p>
+</div>
+</main>
+</div>
+
+<footer>
+<p><small>Copyright City Care Hospital 2026</small></p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

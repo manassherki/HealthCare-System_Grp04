@@ -1,0 +1,204 @@
+/* registration.css - Styling for Patient Registration Page */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1f4f66;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 12px 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #2f6f8f;
+}
+
+.page-layout {
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.sidebar {
+    flex: 1 1 220px;
+}
+
+.content {
+    flex: 3 1 550px;
+}
+
+/* Sidebar info card */
+.info-card {
+    border: 1px solid #cfd8dc;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    margin-top: 0;
+    border-bottom: 2px solid #eaf3f6;
+    padding-bottom: 8px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.info-card li {
+    padding: 6px 2px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+}
+
+.info-card li:hover {
+    background-color: #eaf3f6;
+}
+
+/* Form Styling */
+form fieldset {
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    padding: 18px;
+    margin: 18px 0;
+    background-color: #ffffff;
+}
+
+form legend {
+    padding: 0 10px;
+    color: #1f4f66;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #1f4f66;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #2f6f8f;
+    outline: none;
+    box-shadow: 0 0 4px rgba(47, 111, 143, 0.4);
+}
+
+/* Error validation styling */
+form input.error,
+form select.error,
+form textarea.error {
+    border: 2px solid #d32f2f !important;
+    background-color: #fff8f8;
+}
+
+.error-message {
+    color: #d32f2f;
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+    font-weight: normal;
+}
+
+/* Success message banner */
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #81c784;
+    padding: 14px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Buttons */
+.form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+form input[type="submit"] {
+    background-color: #2f6f8f;
+    color: #ffffff;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1f4f66;
+}
+
+form input[type="reset"] {
+    background-color: #78909c;
+    color: #ffffff;
+}
+
+form input[type="reset"]:hover {
+    background-color: #546e7a;
+}
+
+/* Highlight box */
+.highlight-box {
+    background-color: #fff8e1;
+    color: #7a5b00;
+    font-size: 16px;
+    padding: 12px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 6px;
+    text-shadow: 1px 1px 1px #ffffff;
+    border: 1px solid #ffe082;
+}

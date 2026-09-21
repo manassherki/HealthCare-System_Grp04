@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Care Hospital - Patient Registration</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="registration.css">
+</head>
+<body>
+
+<header style="background-color:#1f4f66; color:#ffffff; padding:20px; text-align:center; border-bottom:3px solid #2f6f8f;">
+    <h1 style="margin:0; color:#ffffff; text-align:center;">Patient Registration</h1>
+    <p style="text-align:center; margin:8px 0 0 0;"><small style="color:#cfe3ea;">Register new patients for OPD and hospital care services</small></p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="departments.html">Departments</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="registration.html">Patient Registration</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="sign_in.html">Sign In</a></li>
+        <li><a href="sign_up.html">Sign Up</a></li>
+    </ul>
+</nav>
+
+<div class="page-layout">
+    <aside class="sidebar">
+        <div class="info-card">
+            <h3>Registration Guidelines</h3>
+            <ul>
+                <li>Enter full legal name as per ID proof</li>
+                <li>Provide active 10-digit mobile number</li>
+                <li>Verify your email for digital records</li>
+                <li>Select correct blood group for medical file</li>
+                <li>Same-day OPD registrations accepted</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Helpdesk Support</h3>
+            <ul>
+                <li>Registration Desk: Ext 101</li>
+                <li>Helpdesk: 022-12345678</li>
+                <li>Emergency: 022-98765432</li>
+                <li>Timing: 24x7 Open</li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="content">
+        <h2>New Patient Registration</h2>
+        <p>Please fill in the patient details below to complete hospital registration.</p>
+
+        <!-- Success Message Container -->
+        <div id="successMessage" class="success-message" style="display: none;"></div>
+
+        <form id="registrationForm" novalidate>
+            <!-- Fieldset 1: Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="patientName">Patient Name:</label>
+                    <input type="text" id="patientName" name="patientName" placeholder="Enter full name">
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                    <span class="error-message" id="dobError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="">-- Select Gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="error-message" id="genderError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="bloodGroup">Blood Group:</label>
+                    <select id="bloodGroup" name="bloodGroup">
+                        <option value="">-- Select Blood Group --</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                    <span class="error-message" id="bloodGroupError"></span>
+                </div>
+            </fieldset>
+
+            <!-- Fieldset 2: Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit Indian mobile number">
+                    <span class="error-message" id="mobileError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. rahul@example.com">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Residential Address:</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter complete address"></textarea>
+                    <span class="error-message" id="addressError"></span>
+                </div>
+            </fieldset>
+
+            <!-- Fieldset 3: Department & Registration Details -->
+            <fieldset>
+                <legend>Department & Registration Details</legend>
+
+                <div class="form-group">
+                    <label for="department">Department / Appointment Type:</label>
+                    <select id="department" name="department">
+                        <option value="">-- Select Department --</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value="Pediatrics">Pediatrics</option>
+                        <option value="Neurology">Neurology</option>
+                        <option value="General Medicine">General Medicine</option>
+                        <option value="ENT">ENT</option>
+                    </select>
+                    <span class="error-message" id="departmentError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="registrationDate">Registration Date:</label>
+                    <input type="date" id="registrationDate" name="registrationDate">
+                    <span class="error-message" id="registrationDateError"></span>
+                </div>
+            </fieldset>
+
+            <!-- Submit and Reset Buttons -->
+            <div class="form-buttons">
+                <input type="submit" id="submitBtn" value="Register Patient">
+                <input type="reset" id="resetBtn" value="Reset Form">
+            </div>
+        </form>
+
+        <div class="highlight-box">
+            Please verify all details before submitting. In case of emergency, contact 022-98765432 directly.
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p><small>Copyright City Care Hospital 2026</small></p>
+</footer>
+
+<script src="registration.js"></script>
+</body>
+</html>
